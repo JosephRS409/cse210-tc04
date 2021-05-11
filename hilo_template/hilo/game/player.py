@@ -1,19 +1,19 @@
-class player:
+from game.dealer import Dealer
+class Player:
     def init(self):
         self.points = 300
+        self.dealer = Dealer()
 
     def choice(self):
         self.option = input("Keep Playing y/n")
 
     def guess(self):
-        self.guess = input("Higher or Lower? h/l")
-
-    def to_play(self):
-        return (self.points > 0 and self.option =="y")
+        guess = input("Higher or Lower? h/l")
+        return guess
     
     def get_points(self):
         
-        if dealer.self.win == True:
+        if self.dealer.win == True:
             self.points = self.points + 100
         else:
              self.points = self.ponts - 75
