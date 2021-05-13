@@ -1,20 +1,23 @@
-from game.dealer import Dealer
-class Player: # translates to 1's & 0's as it runs
+# translates to 1's & 0's as it runs
                 # translates
-    def init(self):
-        self.points = 300
-        self.dealer = Dealer()
+
+class Player:
+    def __init__(self):
+        self.option = "y"
+        self.keep_playing = True
+        self.card_guess = ""
 
     def choice(self):
-        self.option = input("Keep Playing y/n")
+        self.option = input("Keep Playing y/n ")
+        if self.option == "n":
+            self.keep_playing = False
 
+    def guess(self):
+        self.card_guess = input("Higher or Lower? h/l ")
+        
+    #Do we need this, below?
+"""
     def guess(self):
         guess = input("Higher or Lower? h/l")
         return guess
-    
-    def get_points(self):
-        
-        if self.dealer.win == True:
-            self.points = self.points + 100
-        else:
-            self.points = self.points - 75
+"""
