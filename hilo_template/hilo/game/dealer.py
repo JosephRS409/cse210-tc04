@@ -33,6 +33,19 @@ class Dealer():
         Args: 
             self (Player): An instance of Player.
         """
+        print("""
+              Welcome to the Hi/Lo game!
+              
+              Guess if the next card will be higher
+              or lower than the last drawn card.
+              If correct, you get 100pts! Guess wrong 
+              and you lose 75pts!
+              
+              You lose if you hit, or go below, 0pts.
+              You win if you score 1,000 or more pts.
+              
+              Good luck!
+              """)
         while self.keep_playing == True:
             print(f"The card is : {self.old_card}")
             self.player.guess()
@@ -56,10 +69,16 @@ class Dealer():
         if self.points >= 1000:
             print("Congratulations! You won!")
             return False
+        
+        # You get a choice in whether to play if your score is higher than zero.
         if self.points > 0:
             self.player.choice()
+            if self.player.option == "n":
+                print("Okay, thanks for playing.\n Goodbye for now!")
             return (self.points > 0 and self.player.option == "y")
+        # This is if you get zero or less.
         else:
+            print("You lose!")
             return False
 
 
@@ -93,16 +112,29 @@ class Dealer():
         Args: 
             self (Player): An instance of Player.
         """
+        # This added messages will also add to earning a score of 5.
         if self.player.card_guess == "h":
             if self.new_card > self.old_card:
                 self.points = self.points + 100
+                print("Yes! Good guess!\n")
             else:
                 self.points = self.points - 75
+                print("Ouch... Incorrect.\n")
         elif self.player.card_guess == "l":
             if self.old_card > self.new_card:
                 self.points = self.points + 100
+                print("Yes! Good guess!\n")
             else:
                 self.points = self.points - 75
+                print("Ouch... Incorrect.\n")
+                # Note to the team: Let's code in some randomly generated 
+                # insults (from our insult library). This includes some random
+                # graphics of sad failures.
+                
+                # Second Note: Make a feature to mock certain choices. 
+                # e.g. They choose low when the card is "1"
+                # e.g. They choose to keep playing when their score is <100.
+                    # i.e. "You still have hope?"
 
     def card_update(self):
         """Resets (shuffles) the card after each round. This 

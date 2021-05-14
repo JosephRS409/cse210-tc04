@@ -40,3 +40,6 @@ class Player:
         """
         self.card_guess = input("Higher or Lower? h/l ")
         # Removed guess variable. Used card_guess attribute instead.
+        
+        # Note to team: Add User Input Validation in 
+        # the future to make code idiot proof.
