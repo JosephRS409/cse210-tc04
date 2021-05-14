@@ -36,3 +36,7 @@ root                    (project root folder)
 ## Authors
 ---
 * TODO: Add your names and emails here
+* Alan Wangsgard
+* Austin Jesperson
+* Dallin Sevy
+* Joseph Stewart -- ste18050@byui.edu (school) JosephRobertStewart@gmail.com (GitHub)
