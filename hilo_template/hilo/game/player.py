@@ -7,11 +7,11 @@ class Player:
     (What the methods are and do)
     
     Attributes: [attributes are just variables with data]
-        option:
-        keep_playing:
-        card_guess:
-        
+        option: ADD STUFF HERE
+        keep_playing: ADD STUFF HERE
+        card_guess: ADD STUFF HERE
     """
+    
     def __init__(self):
         """Class constructor. Declares and initializes instance attributes.
 
