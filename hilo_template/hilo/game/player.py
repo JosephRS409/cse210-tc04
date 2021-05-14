@@ -3,13 +3,13 @@
 
 class Player:
     """[This is a class documentation block comment.]
-    (What this is)
-    (What the methods are and do)
+    Allows user to interact with the game. User can choose to keep playing 
+    and choose high or low.
     
     Attributes: [attributes are just variables with data]
-        option: ADD STUFF HERE
-        keep_playing: ADD STUFF HERE
-        card_guess: ADD STUFF HERE
+        option: User's choice of "Y" to choose to keep playing.
+        keep_playing: Boolean value -- from option (Y): set True to keep playing.
+        card_guess: sets string value for card value
     """
     
     def __init__(self):
@@ -39,11 +39,4 @@ class Player:
             self (Player): An instance of Player.
         """
         self.card_guess = input("Higher or Lower? h/l ")
-        
-        
-    #Do we need this, below?
-"""
-    def guess(self):
-        guess = input("Higher or Lower? h/l")
-        return guess
-"""
+        # Removed guess variable. Used card_guess attribute instead.
